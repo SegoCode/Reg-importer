@@ -2,7 +2,7 @@
 <p align="center">
   <img width="40%" align="center" src="https://github.com/SegoCode/Reg-importer/blob/master/media/logo.png">
 </p>
-<h1/>
+<h1 align="center"></h1>
 <p align="center">
     An easy ps tool for import registry values in "profiles" 
 </p>
