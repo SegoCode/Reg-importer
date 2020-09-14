@@ -1,0 +1,65 @@
+[
+   {
+      "description":"Disable data collection",
+      "path":"HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\DataCollection",
+      "name":"AllowTelemetry",
+      "type":"DWord",
+      "value":"0"
+   },
+   {
+      "description":"Set privacy policy not accepted",
+      "path":"HKCU:\\SOFTWARE\\Microsoft\\Personalization\\Settings",
+      "name":"AcceptedPrivacyPolicy",
+      "type":"DWord",
+      "value":"0"
+   },
+   {
+      "description":"Block advertising ID for experiencess across apps",
+      "path":"HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AdvertisingInfo",
+      "name":"Enabled",
+      "type":"DWord",
+      "value":"0"
+   },
+   {
+      "description":"Disable scan for contact informations",
+      "path":"HKCU:\\SOFTWARE\\Microsoft\\InputPersonalization\\TrainedDataStore",
+      "name":"HarvestContacts",
+      "type":"DWord",
+      "value":"0"
+   },
+   {
+      "description":"Disable location tracking",
+      "path":"HKCU:\\SOFTWARE\\Microsoft\\InputPersonalization\\TrainedDataStore",
+      "name":"Status",
+      "type":"DWord",
+      "value":"0"
+   },
+   {
+      "description":"Disable Windows feedback",
+      "path":"HKCU:\\SOFTWARE\\Microsoft\\Siuf\\Rules",
+      "name":"NumberOfSIUFInPeriod",
+      "type":"DWord",
+      "value":"0"
+   },
+   {
+      "description":"Disable error reporting",
+      "path":"HKLM:\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting",
+      "name":"Disable",
+      "type":"DWord",
+      "value":"1"
+   },
+   {
+      "description":"Disable application suggestions",
+      "path":"HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager",
+      "name":"ContentDeliveryAllowed",
+      "type":"DWord",
+      "value":"0"
+   },
+   {
+      "description":"Disable Location Tracking",
+      "path":"HKCU:\\SOFTWARE\\Microsoft\\Siuf\\Rules",
+      "name":"NumberOfSIUFInPeriod",
+      "type":"DWord",
+      "value":"0"
+   }
+]
