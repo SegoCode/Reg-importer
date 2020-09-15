@@ -20,3 +20,23 @@
 
 ![Demo](media/demoJsonConsole.png)
 
+## Overview:
+
+* Download ps1.
+* Go to [profiles](profiles/) folder.
+* Select your profile and move to the root ps1 directory.
+* Rename to profile.json.
+* Run ps1
+
+## Features:
+
+* Auto backup default reg values in root ps1 directory.
+* [Interactive menu](https://github.com/chrisseroka/ps-menu).
+* Apply the profile entirely
+
+## Contribute:
+
+Help make Reg-import better by [creating new "profiles"](profiles/), pull requests are welcome, and join the "profiles" contributors list.
+
+
+
