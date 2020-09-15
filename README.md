@@ -17,3 +17,6 @@
     <img src="https://img.shields.io/github/languages/code-size/segocode/Reg-importer" alt="size" />
   </a>
 </p>
+
+![Demo](media/demoJsonConsole.png)
+
