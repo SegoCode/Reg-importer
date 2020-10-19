@@ -26,7 +26,7 @@
 * Go to [profiles](profiles/) folder.
 * Select your "profile" and move to the root ps1 directory.
 * Rename to profile.json.
-* Run ps1
+* Run ps1 with admin rights.
 
 ## Features:
 
