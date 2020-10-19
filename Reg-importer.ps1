@@ -142,7 +142,7 @@ While ($TRUE) {
 
     if ( $selectionValue -eq 0) {
         Write-Host " "
-        Write-Host "    [?]  - For safety reasons, NF paths dont be created continue? [Y/N] > " �NoNewline
+        Write-Host "    [?]  - For safety reasons, NF paths dont be created continue? [Y/N] > " -NoNewline
         $option = Read-Host
         if ($option -eq 'Y') {
             $jsonConfig | Select-Object -Property description, path, name, type, value | ForEach-Object {
@@ -163,7 +163,7 @@ While ($TRUE) {
             }
         } else {
             Write-Host " "
-            Write-Host "    [?]  - Not found path in registry, create the path and key? [Y/N] > " �NoNewline
+            Write-Host "    [?]  - Not found path in registry, create the path and key? [Y/N] > " -NoNewline
             $option = Read-Host
             if ($option -eq 'Y') {
                 New-Item -Path $keyData.path -Force
