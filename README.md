@@ -36,7 +36,7 @@
 
 ## Contribute
 
-Help make Reg-import better by [creating new "profiles"](profiles/), pull requests are welcome, and join the "profiles" contributors list.
+Help make Reg-import better by [creating new "profiles"](profiles/), pull requests are welcome, and join the contributors list.
 
 
 
