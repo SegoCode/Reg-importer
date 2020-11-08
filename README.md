@@ -32,7 +32,7 @@
 
 * Auto backup default reg values in root ps1 directory.
 * [Interactive menu](https://github.com/chrisseroka/ps-menu).
-* Apply the profile entirely
+* Apply the profile entirely.
 
 ## Contribute
 
