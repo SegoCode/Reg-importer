@@ -8,13 +8,13 @@
 </p>
 <p align="center">
   <a style="text-decoration:none">
-    <img src="https://img.shields.io/badge/core-powershell 2.0-blue" alt="core" />
+    <img src="https://img.shields.io/badge/core-powershell 2.0-blue?style=flat-square" alt="core" />
   </a>
   <a style="text-decoration:none">
-    <img src="https://img.shields.io/badge/Platform%20%26%20Version%20Support-Windows%2010-blue" alt="support" />
+    <img src="https://img.shields.io/badge/Platform%20%26%20Version%20Support-Windows%2010-blue?style=flat-square" alt="support" />
   </a>
   <a style="text-decoration:none" >
-    <img src="https://img.shields.io/github/languages/code-size/segocode/Reg-importer" alt="size" />
+    <img src="https://img.shields.io/github/languages/code-size/segocode/Reg-importer?style=flat-square" alt="size" />
   </a>
 </p>
 
