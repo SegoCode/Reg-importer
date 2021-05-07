@@ -4,7 +4,7 @@
 </p>
 <h1 align="center"></h1>
 <p align="center">
-    An easy ps tool for import registry values in "profiles" 
+    An easy ps tool for import registry values in "profiles" (Json)
 </p>
 <p align="center">
   <a style="text-decoration:none">
