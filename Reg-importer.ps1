@@ -156,7 +156,7 @@ While ($TRUE) {
 
         $keyData = $jsonConfig.GetValue($selectionValue - 1)
 		$pathString = $keyData.path
-        if (Test-Path Registry::$pathString) {
+        if ((Test-Path Registry::$pathString) -and ((Get-Item -Path Registry::$pathString).Property -contains $keyData.name)) {
             if (((Get-ItemProperty -Path Registry::$pathString).($keyData.name)) -ne $keyData.value) {
                 $backLocation = $bakFolder + "\" + $keyData.description + "_bak.reg" 
                 reg export $pathString $backLocation /y
@@ -167,7 +167,9 @@ While ($TRUE) {
             Write-Host "    [?]  - Not found path in registry, create the path and key? [Y/N] > " -NoNewline
             $option = Read-Host
             if ($option -eq 'Y') {
-                New-Item -Path Registry::$pathString -Force
+				if(!(Test-Path Registry::$pathString)){
+					New-Item -Path Registry::$pathString -Force
+				}
                 New-ItemProperty -Path Registry::$pathString -Name $keyData.name -Value $keyData.value
             }
 
