@@ -95,8 +95,9 @@ function Create-Menu-json {
     param ($jsonConfig)
     $selection = @('[?]  - Apply all')
     $jsonConfig | Select-Object -Property description, path, name, type, value | ForEach-Object {
-        if ((Get-Item $_.path -EA Ignore).Property -contains $_.name) {
-            $keyData = Get-ItemProperty -Path $_.path -Name $_.name
+        $pathString = $_.path
+		if ((Get-Item -Path Registry::$pathString).Property -contains $_.name) {
+            $keyData = Get-ItemProperty -Path Registry::$pathString -Name $_.name
             if ($keyData.($_.name) -eq $_.value) {
                 $selection += "[X]  - " + $_.description 
             }else {
@@ -154,20 +155,20 @@ While ($TRUE) {
     } else {
 
         $keyData = $jsonConfig.GetValue($selectionValue - 1)
-
-        if (Test-Path $keyData.path) {
-            if (((Get-ItemProperty -Path $keyData.path).($keyData.name)) -ne $keyData.value) {
+		$pathString = $keyData.path
+        if (Test-Path Registry::$pathString) {
+            if (((Get-ItemProperty -Path Registry::$pathString).($keyData.name)) -ne $keyData.value) {
                 $backLocation = $bakFolder + "\" + $keyData.description + "_bak.reg" 
-                reg export $keyData.path.Replace(':', '') $backLocation /y
-                Set-ItemProperty -Path $keyData.path -Name $keyData.name -Type $keyData.type -Value $keyData.value
+                reg export Registry::$pathString.Replace(':', '') $backLocation /y
+                Set-ItemProperty -Path Registry::$pathString -Name $keyData.name -Type $keyData.type -Value $keyData.value
             }
         } else {
             Write-Host " "
             Write-Host "    [?]  - Not found path in registry, create the path and key? [Y/N] > " -NoNewline
             $option = Read-Host
             if ($option -eq 'Y') {
-                New-Item -Path $keyData.path -Force
-                New-ItemProperty -Path $keyData.path -Name $keyData.name -Value $keyData.value
+                New-Item -Path Registry::$pathString -Force
+                New-ItemProperty -Path Registry::$pathString -Name $keyData.name -Value $keyData.value
             }
 
         }
