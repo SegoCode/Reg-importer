@@ -20,7 +20,7 @@
 
 ![Demo](media/demoJsonConsole.png)
 
-## Overview
+## Usage & info
 
 * Download ps1.
 * Go to [profiles](profiles/) folder.
