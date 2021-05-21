@@ -159,7 +159,7 @@ While ($TRUE) {
         if (Test-Path Registry::$pathString) {
             if (((Get-ItemProperty -Path Registry::$pathString).($keyData.name)) -ne $keyData.value) {
                 $backLocation = $bakFolder + "\" + $keyData.description + "_bak.reg" 
-                reg export Registry::$pathString.Replace(':', '') $backLocation /y
+                reg export $pathString $backLocation /y
                 Set-ItemProperty -Path Registry::$pathString -Name $keyData.name -Type $keyData.type -Value $keyData.value
             }
         } else {
